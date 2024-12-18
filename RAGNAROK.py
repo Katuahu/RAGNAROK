@@ -17,7 +17,7 @@ admin_id = ["5599402910"]
 GROUP_ID = "-1002155671416"
 REQUIRED_CHANNELS = [
     "@RAGNAROKCRACKER",
-    "@NUCLEARCRACKS"
+    "@RAGNAROKCRACKS"
 ]
 
 # Default cooldown and attack limits
@@ -70,7 +70,7 @@ def handle_attack(message):
 
     # Ensure user is in the group
     if message.chat.id != int(GROUP_ID):
-        bot.reply_to(message, "This bot can only be used in the specified group.")
+        bot.reply_to(message, "This bot can only be used in the specified group join https://t.me/RAGNAROKCRACKS.")
         return
 
     # Ensure user is a member of all required channels
