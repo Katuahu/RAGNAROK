@@ -17,9 +17,7 @@ admin_id = ["5599402910"]
 GROUP_ID = "-1002155671416"
 REQUIRED_CHANNELS = [
     "@RAGNAROKCRACKER",
-    "@SmokieOfficial",
-    "@NUCLEARCRACKS",
-    "@RAJABHAIYA_04"
+    "@NUCLEARCRACKS"
 ]
 
 # Default cooldown and attack limits
@@ -191,6 +189,12 @@ def set_cooldown(message):
     except ValueError:
         bot.reply_to(message, "Please provide a valid number of seconds.")
 
+@bot.message_handler(commands=['start'])
+def welcome_start(message):
+    user_name = message.from_user.first_name
+    response = f"Welcome to Your Home, Feel Free to Explore.\nThe World's Best Ddos Bot\nTo Use This Bot Join https://t.me/bgmisellingbuying"
+    bot.reply_to(message, response)
+    
 @bot.message_handler(commands=['viewusers'])
 def view_users(message):
     if str(message.from_user.id) not in admin_id:
